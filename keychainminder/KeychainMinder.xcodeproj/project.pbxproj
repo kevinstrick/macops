@@ -23,6 +23,8 @@
 		0D19C15F1B6AB329000D5475 /* PasswordNotKnownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D19C15D1B6AB329000D5475 /* PasswordNotKnownView.m */; };
 		0D19C1601B6AB329000D5475 /* PasswordNotKnownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D19C15E1B6AB329000D5475 /* PasswordNotKnownView.xib */; };
 		0D80140E1B6C0074006B8540 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D80140D1B6C0074006B8540 /* PasswordViewController.m */; };
+		62C28CDC1BEBEB7D00386557 /* scds.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C28CDB1BEBEB7D00386557 /* scds.png */; };
+		62C28CF41BEC19FB00386557 /* screensaver_auth.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62C28CF31BEC19EE00386557 /* screensaver_auth.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +40,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		0D0EA9E01B62D9CA0041A897 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				62C28CF41BEC19FB00386557 /* screensaver_auth.sh in CopyFiles */,
 				0D189CB21B6BE74D0082B239 /* uninstall.sh in CopyFiles */,
 				0D189CB11B6BE74A0082B239 /* update_authdb.py in CopyFiles */,
 				0D189CAE1B6BE4D60082B239 /* KeychainMinderGUI.app in CopyFiles */,
@@ -76,6 +79,8 @@
 		0D19C15E1B6AB329000D5475 /* PasswordNotKnownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordNotKnownView.xib; sourceTree = "<group>"; };
 		0D80140C1B6C0074006B8540 /* PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordViewController.h; sourceTree = "<group>"; };
 		0D80140D1B6C0074006B8540 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
+		62C28CDB1BEBEB7D00386557 /* scds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scds.png; sourceTree = "<group>"; };
+		62C28CF31BEC19EE00386557 /* screensaver_auth.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = screensaver_auth.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +126,7 @@
 			children = (
 				0D0EA9B41B62C0FC0041A897 /* main.m */,
 				0D0EA9AE1B62BFE20041A897 /* Info.plist */,
+				62C28CF31BEC19EE00386557 /* screensaver_auth.sh */,
 				0D189CAF1B6BE7470082B239 /* uninstall.sh */,
 				0D189CB01B6BE7470082B239 /* update_authdb.py */,
 			);
@@ -169,6 +175,7 @@
 		0DD79FFA1B6AC5C900739089 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				62C28CDB1BEBEB7D00386557 /* scds.png */,
 				0D0EA9C61B62D9AE0041A897 /* main.m */,
 				0D0EA9C21B62D9AE0041A897 /* Info.plist */,
 				0D19C1531B6AB1A7000D5475 /* Keychain_Unlocked.png */,
@@ -221,7 +228,7 @@
 		0D0EA9A21B62BFE20041A897 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Google Inc";
 				TargetAttributes = {
 					0D0EA9A91B62BFE20041A897 = {
@@ -258,6 +265,7 @@
 			files = (
 				0D19C1541B6AB1A7000D5475 /* Keychain_Unlocked.png in Resources */,
 				0D19C15B1B6AB320000D5475 /* PasswordKnownView.xib in Resources */,
+				62C28CDC1BEBEB7D00386557 /* scds.png in Resources */,
 				0D19C1521B6AB19E000D5475 /* Keychain_Locked.png in Resources */,
 				0D19C1601B6AB329000D5475 /* PasswordNotKnownView.xib in Resources */,
 				0D0EA9CC1B62D9AE0041A897 /* MainMenu.xib in Resources */,
@@ -391,6 +399,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KeychainMinder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Security/SecurityAgentPlugins";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.corp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
@@ -403,6 +412,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KeychainMinder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Security/SecurityAgentPlugins";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.corp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
@@ -422,6 +432,7 @@
 				INFOPLIST_FILE = KeychainMinderGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.corp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -435,6 +446,7 @@
 				INFOPLIST_FILE = KeychainMinderGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.corp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

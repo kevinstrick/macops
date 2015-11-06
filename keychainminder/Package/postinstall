@@ -3,6 +3,7 @@
 [[ $3 != "/" ]] && exit 0
 
 /usr/bin/python /Library/Security/SecurityAgentPlugins/KeychainMinder.bundle/Contents/Resources/update_authdb.py --install
+/Library/Security/SecurityAgentPlugins/KeychainMinder.bundle/Contents/Resources/screensaver_auth.sh
 
 user=$(/usr/bin/stat -f '%u' /dev/console)
 [[ -z "$user" ]] && exit 0
